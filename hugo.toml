@@ -1,0 +1,86 @@
+baseURL = "https://jonassoft.com/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
+title = "安卓开发"
+theme = "PaperMod"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+pagination.pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "安卓开发"
+  description = "Jonas 的安卓开发笔记,记录源码、框架、调优与踩坑"
+  author = "Jonas"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowToc = true
+  TocOpen = false
+  DateFormat = "2006-01-02"
+
+  [params.homeInfoParams]
+    Title = "👋 Hi, I'm Jonas"
+    Content = "这里是我的安卓开发笔记,记录从应用层到 framework、kernel 的折腾与思考。"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/jonas-william"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+  [params.assets]
+    disableHLJS = true
+    favicon = "/favicon.ico"
+
+  [params.label]
+    text = "安卓开发"
+
+[[menu.main]]
+  identifier = "posts"
+  name = "文章"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "archives"
+  name = "归档"
+  url = "/archives/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "search"
+  name = "搜索"
+  url = "/search/"
+  weight = 40
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  lineNos = true
+  style = "monokai"
+  noClasses = false
+
+[markup.goldmark.renderer]
+  unsafe = true
